@@ -6,11 +6,36 @@
 //
 
 import SwiftUI
+import Foundation
 
-    public struct CustomLocation: Identifiable {
-        public let id = UUID()
-        public let name: String
-        public let latitude: Double
-        public let longitude: Double
+public protocol CustomLocation: Identifiable {
+    
+    
+    /**
+     The id to display  in the annotation's view.
+     */
+    var id: UUID? {
+        get
+    }
+    
+    /**
+     The name to display  in the annotation's view.
+     */
+    var name: String? {
+        get
+    }
+    
+    /**
+      latituder of the annotations's view.
+     */
+    var latitude: Double? {
+        get
+    }
+    /**
+     longitude of the annotations's view.
+     */
+    var longitude: Double? {
+        get
+    }
 }
 

@@ -6,9 +6,9 @@ import Combine
 
 
 public struct CustomMapView: UIViewRepresentable {
-    
-    public var customLocations: [CustomLocation]
-     init(customLocations: [CustomLocation]) {
+   
+    let customLocations: [any CustomLocation]
+    init(customLocations: [any CustomLocation]) {
         self.customLocations = customLocations
     }
     public func makeUIView(context:UIViewRepresentableContext<CustomMapView>) -> MKMapView {
@@ -25,7 +25,7 @@ public struct CustomMapView: UIViewRepresentable {
         // Add annotations for custom locations
         for location in customLocations {
             let annotation = MKPointAnnotation()
-            annotation.coordinate = CLLocationCoordinate2D(latitude: location.latitude, longitude: location.longitude)
+            annotation.coordinate = CLLocationCoordinate2D(latitude: location.latitude ?? 0.0, longitude: location.longitude ?? 0.0)
             annotation.title = location.name
             uiView.addAnnotation(annotation);
         }
