@@ -2,6 +2,7 @@ import SwiftUI
 import MapKit
 import CoreLocation
 import UIKit
+import Combine
 
 
 public struct CustomMapView: UIViewRepresentable {
@@ -33,12 +34,7 @@ public struct CustomMapView: UIViewRepresentable {
 }
 
 
-public struct CustomLocation: Identifiable {
-    public let id = UUID()
-    public let name: String
-    public let latitude: Double
-    public let longitude: Double
-}
+
 // MARK: - Previews
 
 //struct MapView_Previews: PreviewProvider {
