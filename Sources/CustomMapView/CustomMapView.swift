@@ -7,7 +7,7 @@ import Combine
 
 public struct CustomMapView: UIViewRepresentable {
     
-    var customLocations: [CustomLocation]
+    public var customLocations: [CustomLocation]
      init(customLocations: [CustomLocation]) {
         self.customLocations = customLocations
     }
