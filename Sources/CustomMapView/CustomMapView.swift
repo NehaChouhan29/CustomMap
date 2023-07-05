@@ -7,10 +7,10 @@ import Combine
 
 public struct CustomMapView: UIViewRepresentable {
     let annotations: [MapViewAnnotation]
-    let customLocations: [any CustomLocation]
-    init(customLocations: [any CustomLocation], annotations: [MapViewAnnotation]) {
+    let customLocations: [CustomLocation]
+    init(customLocations: [CustomLocation], annotations: [MapViewAnnotation]) {
         self.customLocations = customLocations
-        self .annotations = annotations
+        self a
     }
     public func makeUIView(context:UIViewRepresentableContext<CustomMapView>) -> MKMapView {
         let mapView = MKMapView()

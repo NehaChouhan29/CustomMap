@@ -7,8 +7,9 @@
 
 import SwiftUI
 import Foundation
+import MapKit
 
-public protocol CustomLocation: Identifiable {
+public protocol CustomLocation: MKAnnotation {
     
     
     /**
